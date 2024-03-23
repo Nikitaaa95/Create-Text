@@ -2,7 +2,6 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "./server/server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
@@ -11,20 +10,11 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "core-js": "^3.23.3",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "nodemon": "^2.0.4"
   }
 }

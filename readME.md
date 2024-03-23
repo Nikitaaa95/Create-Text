@@ -29,3 +29,6 @@ https://phoenixnap.com/kb/package-json
 https://stackoverflow.com/questions/39729194/role-of-the-src-and-dist-folders-in-npm-packages
 
 ### Starter Code from Assignment
+
+### Help with errors around dist files
+Omar - Opeart - ask306162
