@@ -21,6 +21,7 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
     "webpack": "^5.91.0",
