@@ -2,10 +2,10 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
     "start:dev": "nodemon server.js --ignore client",
-    "start": "node server.js",
+    "start": "node ./server/server.js",
     "server": "node server.js",
     "build": "echo 'Build script placeholder'",
     "install": "echo 'Install script placeholder'",
@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "core-js": "^3.23.3"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
