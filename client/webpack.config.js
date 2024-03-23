@@ -25,14 +25,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(srcDir, 'index.html'),
+      template: path.resolve(__dirname, 'client', 'index.html'),
       filename: 'index.html',
       chunks: ['main'],
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(srcDir, 'install.html'),
-      filename: 'install.html',
-      chunks: ['install'],
     }),
     new WebpackPwaManifest({
       name: 'Text Create',
