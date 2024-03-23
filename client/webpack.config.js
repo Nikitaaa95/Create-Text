@@ -14,13 +14,10 @@ if (!fs.existsSync(distDir)) {
 
 module.exports = {
   mode: 'development',
-  entry: {
-    main: path.resolve(srcDir, 'js', 'index.js'),
-    install: path.resolve(srcDir, 'js', 'install.js'),
-  },
+  entry: './src/index.js',
   output: {
-    filename: '[name].bundle.js',
-    path: distDir,
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
