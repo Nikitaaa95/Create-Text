@@ -8,6 +8,6 @@ app.use(express.static(path.join(__dirname, 'client/dist')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require('./server/routes/htmlRoutes')(app);
+require('../server/routes/htmlRoutes')(app);
 
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
