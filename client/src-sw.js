@@ -26,5 +26,43 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+const assetCache = new CacheFirst({
+  cacheName: 'asset-cache',
+  plugins: [
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+    new ExpirationPlugin({
+      maxAgeSeconds: 7 * 24 * 60 * 60, // Cache for 7 days
+    }),
+  ],
+});
+
+// Match requests for CSS, JavaScript, and images
+registerRoute(
+  ({ request }) =>
+    request.destination === 'style' ||
+    request.destination === 'script' ||
+    request.destination === 'image',
+  assetCache
+);
+
 registerRoute();
+
+const fontCache = new CacheFirst({
+  cacheName: 'font-cache',
+  plugins: [
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+    new ExpirationPlugin({
+      maxAgeSeconds: 30 * 24 * 60 * 60, // Cache for 30 days
+    }),
+  ],
+});
+
+// Match requests for fonts
+registerRoute(
+  ({ request }) => request.destination === 'font',
+  fontCache
+);
