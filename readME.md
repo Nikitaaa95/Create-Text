@@ -1,11 +1,12 @@
 
 ## Text Create
 Github Repo: https://github.com/Nikitaaa95/Create-Text
-Deployed Tool: 
+Deployed Tool: https://create-text.onrender.com/
 
 ## Description
 This project is a text editor web application built using a client-server folder structure. It utilizes webpack for bundling JavaScript files and IndexedDB for database storage. The application aims to provide offline functionality through a service worker and is deployed on Render.
-
+### Homepage
+![Set up JATE page](./Screenshot.png)
 
 ## Usage
 1. Open a web browser and navigate to the deployed tool.
@@ -33,3 +34,5 @@ https://stackoverflow.com/questions/39729194/role-of-the-src-and-dist-folders-in
 ### Help with errors around dist files
 Omar - Opeart - ask306162
 Sebastian - Salvarado - ask306190
+### Deployment assistance
+Shekar - Smaharaj - ask306197
